@@ -1,0 +1,16 @@
+﻿l_english:
+  # Buildings
+  darkpack.darkspace.building_gray_tempest_assembly.effects: "This building turns £nanites£ §Y$nanites$§! into new £pop£ §YNanite Pops§!"
+  # Districts
+  district_gt_city: "Nano-Socket"
+  district_gt_city_plural: "Nano-Sockets"
+  district_gt_city_desc: "Living Nanites need homes too, right?"
+
+  # Jobs & Eco
+  planet_nanite: "Nanite Jobs"
+  mod_planet_nanite_produces_mult: "£job_gray_drone_nanite£ $job_gray_drone_nanite_plural$ Output"
+  job_gray_drone_tech_effect_desc: "£job_gray_drone_tech£ $job_gray_drone_tech_plural$ turn £energy£ §Y$energy$§! and £nanites£ §Y$nanites$§! into $darkpack.gen.research$ for new technologies"
+  
+  # Others
+  trait_pc_gray_tempest_preference: "Artificial Construct Preference"
+  trait_pc_gray_tempest_preference_desc: "This species only lives on artificial constructs"

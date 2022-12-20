@@ -1,0 +1,125 @@
+##############################################################################
+# Vanilla
+##############################################################################
+
+terraform_link = {
+	from = "pc_nuked"
+	to = "pc_gray_tempest"
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = 5000
+			nanites = 350
+		}
+	}
+	duration = @DP_DS_terraform_grey_tempest_duration
+
+	condition = {
+		has_technology = "tech_climate_restoration"
+		has_origin = "origin_gray_tempest"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			should_terraform_trigger = {
+				CLASS_FROM = pc_nuked
+				CLASS_TO = pc_gray_tempest
+			}
+		}
+	}
+}
+
+##############################################################################
+# Gigastructural
+##############################################################################
+
+terraform_link = {
+	from = "pc_ll_temperate"
+	to = "pc_gray_tempest"
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = @DP_DS_terraform_grey_tempest_energy
+			nanites = @DP_DS_terraform_grey_tempest_nanites
+		}
+	}
+
+	duration = @DP_DS_terraform_grey_tempest_duration
+	
+	condition = {
+		has_origin = "origin_gray_tempest"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			should_terraform_trigger = {
+				CLASS_FROM = pc_ll_temperate
+				CLASS_TO = pc_gray_tempest
+			}
+		}
+	}
+}
+terraform_link = {
+	from = "pc_ll_foggy"
+	to = "pc_gray_tempest"
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = @DP_DS_terraform_grey_tempest_energy
+			nanites = @DP_DS_terraform_grey_tempest_nanites
+		}
+	}
+
+	duration = @DP_DS_terraform_grey_tempest_duration
+	
+	condition = {
+		has_origin = "origin_gray_tempest"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			should_terraform_trigger = {
+				CLASS_FROM = pc_ll_foggy
+				CLASS_TO = pc_gray_tempest
+			}
+		}
+	}
+}
+terraform_link = {
+	from = "pc_ll_torrid"
+	to = "pc_gray_tempest"
+
+	resources = {
+		category = terraforming
+		cost = {
+			energy = @DP_DS_terraform_grey_tempest_energy
+			nanites = @DP_DS_terraform_grey_tempest_nanites
+		}
+	}
+
+	duration = @DP_DS_terraform_grey_tempest_duration
+	
+	condition = {
+		has_origin = "origin_gray_tempest"
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = 5
+			should_terraform_trigger = {
+				CLASS_FROM = pc_ll_torrid
+				CLASS_TO = pc_gray_tempest
+			}
+		}
+	}
+}

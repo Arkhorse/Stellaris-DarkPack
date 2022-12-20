@@ -1,0 +1,37 @@
+origin_gray_tempest = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_resource_consolidation.dds"
+	picture = GFX_origin_gray_tempest
+	
+	starting_colony = pc_gray_tempest
+	initializers = { gray_tempest_start }
+	habitability_preference = pc_gray_tempest
+
+	max_once_global = yes
+
+	playable = {
+		is_ai = no
+	}
+	
+	possible = {
+		species_archetype = {
+			MACHINE
+		}
+		civics = {
+			NOR = {
+				value = civic_machine_assimilator
+				value = civic_machine_servitor
+			}
+		}
+	}
+	description = origin_gray_tempest_effects
+	traits = {
+		trait = trait_ds_nanite
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 0
+	}
+}

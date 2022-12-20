@@ -1,0 +1,30 @@
+# terraform_link = {
+# 	from = "pc_nuked"
+# 	to = "pc_gray_tempest"
+
+# 	resources = {
+# 		category = terraforming
+# 		cost = {
+# 			energy = @DP_DS_terraform_grey_tempest_energy		# 350
+# 			nanites = @DP_DS_terraform_grey_tempest_nanites		# 5000
+# 		}
+# 	}
+
+# 	duration = @DP_DS_terraform_grey_tempest_duration			# 1500
+	
+# 	condition = {
+# 		# has_technology = "tech_climate_restoration"
+# 		has_origin = "origin_gray_tempest"
+# 	}
+
+# 	ai_weight = {
+# 		weight = 0
+# 		modifier = {
+# 			weight = 5
+# 			should_terraform_trigger = {
+# 				CLASS_FROM = pc_nuked 							# Replace with the pc in from above
+# 				CLASS_TO = pc_gray_tempest
+# 			}
+# 		}
+# 	}
+# }

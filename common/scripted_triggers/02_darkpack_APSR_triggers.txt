@@ -1,0 +1,16 @@
+# Trigger to ensure battle of capitals planets do not spawn on planets used for other purposes. Use apsr_target for planets you wish to target with this
+can_be_apsr_planet_battle_capitals = {
+	is_capital = no
+	is_asteroid = no
+	is_star = no
+	is_moon = no
+	NOT = {
+		has_planet_flag = blacklist_APSR
+		merg_is_gas_giant = yes
+		merg_is_ringworld_type = yes
+		merg_is_machine_world = yes
+		merg_is_empty_space = yes
+		merg_is_habitat = yes
+		merg_is_special_colony = yes
+	}
+}

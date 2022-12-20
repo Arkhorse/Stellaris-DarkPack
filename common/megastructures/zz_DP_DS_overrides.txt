@@ -1,0 +1,123 @@
+### Changes:
+### 3.5.*, 2022/11/28
+## These changes are made to allow this structure to be built in concentrated shipyard systems without comprimising the planetary dockyards
+# Now buildable anywhere outside gwell 	(place_entity_on_planet_plane = no)
+# Now doesnt show on gmap 				(show_galactic_map_icon = no)
+# properly checks limit
+# show_in_outliner = no
+
+ds_nanite_factory = {
+	entity = "ds_nanite_forge_01_entity"
+	portrait = "GFX_megastructure_construction_background"
+
+	place_entity_on_planet_plane = no
+	build_outside_gravity_well = yes
+	show_galactic_map_icon = no
+	entity_offset = { x = -7 y = 14 }
+	scale_offset = yes
+
+	show_in_outliner = no
+
+	build_time = 730
+	resources = {
+		category = megastructures
+		cost = {
+			# alloys = 1200
+			alloys = -1 multiplier = value:giga_ai_savings_cost|CATEGORY|utility|RESOURCE|alloys|AMOUNT|1200|
+			unity = @giga_small_mega_unity_cost
+		}
+		upkeep = {
+			energy = 5
+			minerals = 7
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_origin = origin_gray_tempest }
+			}
+			nanites = 30
+		}	
+	}
+
+	potential = {
+		has_origin = origin_gray_tempest
+		check_variable = {
+			which = ds_built_nanite_forge
+			value < 4
+		}
+	}
+
+	possible = {
+		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_inside_border"
+			is_inside_border = from
+		}
+		# custom_tooltip = {
+		# 	fail_text = "requires_no_existing_megastructure"
+		# 	has_no_non_gate_megastructure = yes
+		# }
+		custom_tooltip = { fail_text = "requires_surveyed_system"		giga_system_is_surveyed = yes }
+		custom_tooltip = {
+			fail_text = "only_4_nanite_forges"
+			from = { check_variable = { which = ds_built_nanite_forge value < 4 } }
+		}
+	}
+	# placement_rules = {
+	# 	planet_possible = {
+	# 		custom_tooltip = {
+	# 			fail_text = "requires_no_anomaly"
+	# 			has_anomaly = no
+	# 		}
+	# 		custom_tooltip = {
+	# 			fail_text = "requires_not_asteroid"
+	# 			is_asteroid = no
+	# 		}
+	# 		custom_tooltip = {
+	# 			fail_text = "requires_not_star"
+	# 			is_star = no
+	# 		}
+	# 		custom_tooltip = {
+	# 			fail_text = "requires_no_existing_megastructure"
+	# 			planet_has_no_megastructure = yes
+	# 		}
+	# 	}
+	# }
+
+	ai_weight = {
+		factor = 15		
+		modifier = {
+			factor = 0.1
+			starbase = { NOT = { has_starbase_size >= starbase_starfortress } }
+		}			
+		modifier = {
+			factor = 0.1
+			any_neighbor_system = {
+				exists = owner
+				NOT = { 
+					owner = { is_same_value = from } 
+				}
+			}
+		}
+	}
+	station_modifier = {
+		starbase_shipyard_capacity_add = 5
+	}
+	on_build_start = {
+		giga_ai_savings_withdraw = { CATEGORY = utility RESOURCE = alloys AMOUNT = 1200 }
+		giga_ai_savings_withdraw = { CATEGORY = utility RESOURCE = influence AMOUNT = 50 }
+	}
+	on_build_cancel = {
+		giga_ai_savings_refund = { CATEGORY = utility RESOURCE = alloys }
+		giga_ai_savings_refund = { CATEGORY = utility RESOURCE = unity }
+	}
+	on_build_complete = {
+		fromfrom.planet = {
+			giga_set_has_mega_flag = yes
+			if = { limit = { has_orbital_station = yes } orbital_station = { dismantle = yes } }
+		}
+		from = {
+			change_variable = { which = ds_built_nanite_forge value = 1 }
+		}
+	}
+}

@@ -1,0 +1,56 @@
+automate_generator_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_generator_designation = yes
+	}
+
+	prio_districts = {
+		district_generator
+		district_hab_energy
+		district_generator_uncapped
+		district_rw_generator
+		district_generator_aero
+		district_arcane_energy
+		district_gt_energy
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+		}
+
+		2 = {
+			building = building_energy_grid
+		}
+
+		3 = {
+			building = building_betharian_power_plant
+		}
+
+		4 = {
+			building = building_gray_tempest_core_1
+			available = {
+				owner = {
+					has_origin = origin_gray_tempest
+				}
+			}
+		}
+		4 = {
+			building = building_gray_tempest_core_2
+			available = {
+				owner = {
+					has_origin = origin_gray_tempest
+				}
+			}
+		}
+		4 = {
+			building = building_gray_tempest_core_3
+			available = {
+				owner = {
+					has_origin = origin_gray_tempest
+				}
+			}
+		}
+	}
+}

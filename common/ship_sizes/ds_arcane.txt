@@ -1,0 +1,57 @@
+arcane_harbinger = {
+	formation_priority = @colossus_formation_priority
+	max_speed = 140
+	acceleration = 0.1
+	rotation_speed = 0.08
+	collision_radius = 500
+	max_hitpoints = 70000
+
+	modifier = {
+		ship_evasion_add = @colossus_evasion
+	}
+
+	size_multiplier = 20
+	fleet_slot_size = 20
+	section_slots = { "mid" = { locator = "core" } }
+	num_target_locators = 10
+	is_space_station = no
+	icon_frame = 6
+	base_buildtime = 1000
+	can_have_federation_design = no
+	enable_default_design = yes	
+	enable_3dview_in_ship_browser = yes 
+	default_behavior = ki
+	selectable = { host_has_dlc = "Apocalypse" }
+
+	# is_space_object = no
+	# graphical_culture = no
+
+	prerequisites = { "tech_arcane_ascension" }
+	# potential_country = { NOT = { has_civic = civic_spectrals } }
+	potential_country = { NOT = { has_origin = origin_spectrals_cluster } }
+	combat_disengage_chance = 0
+	class = shipclass_military_special
+	construction_type = starbase_shipyard
+
+	required_component_set = "power_core"
+	required_component_set = "ftl_components"
+	required_component_set = "thruster_components"
+	required_component_set = "sensor_components"
+	required_component_set = "combat_computers"
+
+	resources = {
+		category = ships
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	min_upgrade_cost = {
+		alloys = 3
+	}
+
+	ai_ship_data = {
+		min = 1
+		max = 1
+	}
+}

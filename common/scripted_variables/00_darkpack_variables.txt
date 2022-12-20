@@ -1,0 +1,23 @@
+##############################################################################
+# Darkspace
+##############################################################################
+## General
+@DP_DS_district_upkeep_energy_rural = 1
+@DP_DS_district_upkeep_energy_urban = 2
+@DP_DS_district_upkeep_nanites_rural = 0
+@DP_DS_district_upkeep_nanites_urban = 0
+
+@DP_DS_district_rural_build_time = 240
+@DP_DS_district_rural_cost = 300
+
+@DP_DS_district_urban_build_time = 480
+@DP_DS_district_urban_cost = 500
+
+@DP_DS_district_hab_build_time = 240
+@DP_DS_district_hab_cost = 240
+## Grey Tempest Origin
+### Terraform
+@DP_DS_terraform_grey_tempest_energy = 5000
+@DP_DS_terraform_grey_tempest_nanites = 350
+@DP_DS_terraform_grey_tempest_duration = 1500
+##############################################################################

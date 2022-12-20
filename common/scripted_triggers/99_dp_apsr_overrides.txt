@@ -1,0 +1,38 @@
+# apsr_spawn_blocker = {
+# 	AND = {
+# 		NOT = { has_planet_flag = "apsr_planet" }
+# 		NOT = { has_planet_flag = hatchling_egg } # Stellaris
+# 		NOT = { has_planet_flag = phaseshifting_active } # Stellaris
+# 		NOT = { has_deposit = d_valley_of_zanaam } # Stellaris
+# 		NOT = { has_modifier = pm_wenkwort_gardens } # Stellaris
+# 		NOT = { has_modifier = terraforming_candidate } # Stellaris
+# 		NOT = { has_modifier = frozen_terraforming_candidate } # Stellaris
+# 		NOT = { has_modifier = toxic_terraforming_candidate } # Stellaris
+# 		NOT = { has_planet_flag = "legw_planet" } # MOD: Legendary Worlds
+# 		NOT = { has_planet_flag = gpm_is_precursor_world } # MOD: Guilli Planet Modifiers
+# 		NOT = { has_planet_flag = gpm_is_wondrous_planet } # MOD: Guilli Planet Modifiers
+# 		NOT = { has_planet_flag = gpm_ego_gaia_planet } # MOD: Guilli Planet Modifiers
+# 	}
+# }
+
+apsr_spawn_blocker = {
+	NOR = {
+		has_planet_flag = "apsr_planet"
+
+		## Stellaris
+		has_planet_flag = hatchling_egg
+		has_planet_flag = phaseshifting_active
+		has_deposit 	= d_valley_of_zanaam
+		has_modifier 	= pm_wenkwort_gardens
+		has_any_terraforming_candidate = yes
+
+		## MODS ##
+		## Legendary Worlds
+		has_planet_flag = "legw_planet"
+
+		## Guilli's Planet Modifiers
+		has_planet_flag = gpm_is_precursor_world
+		has_planet_flag = gpm_is_wondrous_planet
+		has_planet_flag = gpm_ego_gaia_planet
+	}
+}

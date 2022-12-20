@@ -1,0 +1,10 @@
+﻿l_english:
+  # General Use
+  darkpack.gen.research: "£physics£ £society£ £engineering£ §YResearch Points§!"
+  darkpack.gen.energy: "£energy£ §Y$energy$§!"
+  darkpack.gen.minerals: "£mineral£ §Y$mineral$§!"
+  darkpack.gen.food: "£food£ §Y$food$§!"
+  darkpack.gen.alloys: "£alloys£ §Y$$alloys§!"
+  darkpack.gen.consumer_goods: "£consumer_goods£ §Y$consumer_goods$§!"
+  darkpack.gen.nanites: "£nanites£ §Y$nanites$§!"
+  NATURAL_WORMHOLE_IS_blokkat_stripminers: "$TRIGGER_FAIL$ The §YBlokkats§! cant use wormholes"

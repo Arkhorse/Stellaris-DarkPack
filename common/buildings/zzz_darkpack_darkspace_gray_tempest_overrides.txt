@@ -1,0 +1,58 @@
+building_gray_tempest_assembly = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	empire_limit = {
+		base = 5
+	}
+
+	category = pop_assembly
+
+	potential = {
+		exists = owner
+		owner = {
+			is_ai = no
+			has_origin = origin_gray_tempest
+		}
+	}
+
+	allow = {
+		hidden_trigger = {
+			OR = {
+				owner = { is_ai = no }
+				NAND = {
+					free_district_slots = 0
+					free_building_slots <= 1
+					free_housing <= 0
+					free_jobs <= 0
+				}
+			}
+		}
+	}
+
+	destroy_trigger = {
+		exists = owner
+		owner = {
+			is_ai = yes
+		}
+	}
+
+	planet_modifier = {
+		planet_pop_assembly_add = 4
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			alloys = 750
+			nanites = 1200
+		}
+		upkeep = {
+			energy = 10
+			nanites = 10
+		}
+	}
+
+	triggered_desc = {
+		text = darkpack.darkspace.building_gray_tempest_assembly.effects
+	}
+}

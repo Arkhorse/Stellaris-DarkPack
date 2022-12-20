@@ -1,0 +1,43 @@
+# Used to fix the issue of jobs on habitats which consume consumer_goods. The normal blocks are not working
+habitat_fix = {
+	NOR = {
+		has_origin = origin_grey_tempest
+	}
+}
+
+
+
+has_any_starbase_weapon = {
+    # is_valid_
+    OR = {
+        has_starbase_module = gun_battery
+        has_starbase_module = missile_battery
+        has_starbase_module = hangar_bay
+        # Orbital Rings
+        has_starbase_module = orbital_ring_gun_battery
+        has_starbase_module = orbital_ring_missile_battery
+        has_starbase_module = orbital_ring_hangar_bay
+        # Expanded Starbases
+        has_starbase_module = large_battery
+        has_starbase_module = extra_large_battery
+        has_starbase_module = titanic_battery
+        # ES Orbital Rings
+        has_starbase_module = orbital_ring_large_battery
+        has_starbase_module = orbital_ring_extra_large_battery
+        has_starbase_module = orbital_ring_titanic_battery
+    }
+}
+
+has_any_terraforming_candidate = {
+	OR = {
+		#######################################################################
+		### Stellaris ###
+		#######################################################################
+		has_modifier = terraforming_candidate
+		has_modifier = frozen_terraforming_candidate
+		has_modifier = toxic_terraforming_candidate
+		#######################################################################
+		### MODS ###
+		#######################################################################
+	}
+}

@@ -1,0 +1,6 @@
+# Is a shadowgate planet. If mod is added with another valid planet then add to this
+is_shadowgate_planet = {
+	OR = {
+		is_planet_class = pc_shadowgate
+	}
+}

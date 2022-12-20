@@ -1,0 +1,57 @@
+automate_shadowgate_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		is_shadowgate_planet = yes
+	}
+
+	prio_districts = {
+		district_shadowgate_staging_area
+		district_harmonic_subspace_resonator
+		district_shadow_pulse_condenser
+		district_spectral_projection_array
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_precinct_house
+		}
+
+		3 = {
+			building = building_autochthon_monument
+		}
+
+		4 = {
+			building = building_clone_vats
+		}
+
+		5 = {
+			building = building_machine_assembly_complex
+		}
+
+		6 = {
+			building = building_stronghold
+		}
+
+		7 = {
+			building = building_planetary_shield_generator
+		}
+
+		8 = {
+			building = building_stronghold
+			available = {
+				num_buildings = {
+					type = building_stronghold
+					value > 0
+				}
+			}
+		}
+	}
+}

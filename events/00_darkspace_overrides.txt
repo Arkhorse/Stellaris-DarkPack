@@ -1,0 +1,141 @@
+namespace = dsGT
+
+planet_event = {
+	id = dsGT.8	
+	title = "spec.10.name"
+	desc = "spec.10.desc"
+	picture = GFX_evt_gray_goo
+	# show_sound = event_red_alert
+	is_triggered_only = yes	
+	trigger = {
+		NOR = {
+			is_a_habitable_planet_megastructure = yes
+			merg_is_machine_world = yes
+			habitable_structure = yes
+			is_artificial = yes
+			has_apsr_modifiers = yes
+			is_planet_class = pc_core
+			is_planet_class = pc_machine
+			is_planet_class = pc_ringworld_habitable
+			is_planet_class = pc_ancient_ringworld	
+			is_planet_class = pc_zeitriss_gc
+			is_planet_class = pc_kompass
+			is_planet_class = pc_skycatcher
+			is_planet_class = pc_ringworld_spectrals
+			is_planet_class = pc_constructor_ark
+			is_planet_class = pc_stellar_engine
+			is_planet_class = pc_halo
+			is_planet_class = pc_onyx
+			is_planet_class = pc_borg
+			is_planet_class = pc_gray_tempest
+			is_planet_class = pc_habitat
+			# Gigastructures + others
+			is_planet_class = pc_giga_penrose_habitable
+			is_planet_class = pc_interstellar_habitat
+			is_planet_class = pc_interstellar_ringworld_habitable
+			is_planet_class = pc_void_birch
+			is_planet_class = pc_ringworld_city
+			is_planet_class = pc_ringworld_machine
+			is_planet_class = pc_ringworld_hive
+			is_planet_class = pc_birch
+			is_planet_class = pc_alderson_slice_gaia
+			is_planet_class = pc_alderson_slice_gaia_shattered
+			is_planet_class = pc_alderson_slice_ecu
+			is_planet_class = pc_alderson_slice_hive
+			is_planet_class = pc_alderson_slice_machine
+			is_planet_class = pc_alderson_slice_pc
+			is_planet_class = pc_dm_habitat
+			is_planet_class = pc_ae_habitat
+			is_planet_class = pc_sigma_habitat
+			is_planet_class = pc_sigma_deepspace_habitat
+			is_planet_class = pc_phanon_pylon_star
+			is_planet_class = pc_phanon_macripp
+			is_planet_class = pc_ag_ringworld_desert
+			is_planet_class = pc_ag_ringworld_arid 
+			is_planet_class = pc_ag_ringworld_continental 
+			is_planet_class = pc_ag_ringworld_savannah
+			is_planet_class = pc_ag_ringworld_ocean 
+			is_planet_class = pc_ag_ringworld_tropical 
+			is_planet_class = pc_ag_ringworld_tundra 
+			is_planet_class = pc_ag_ringworld_arctic 
+			is_planet_class = pc_ag_ringworld_alpine 
+			is_planet_class = pc_ag_ringworld_machine 
+			is_planet_class = pc_ag_ringworld_gaia 
+			is_planet_class = pc_ag_ringworld_city 
+			is_planet_class = pc_giga_planetary_computer
+		}		
+		owner = {
+			has_origin = origin_gray_tempest
+		}
+	}
+	immediate = {
+		destroy_colony = yes
+		save_event_target_as = ds_invalid_planet
+		country_event = {
+			id = darkpack_darkspace.100
+			days = 3
+		}
+	}
+	option = { name = OK }
+}
+
+namespace = darkpack_darkspace
+
+country_event = {
+	id = darkpack_darkspace.100
+	is_triggered_only = yes
+	hide_window = yes
+
+	trigger = {
+		exists = event_target:ds_invalid_planet
+	}
+
+	immediate = {
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = from
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = shipclass_colonizer
+					}
+					set_location = {
+						target = event_target:ds_invalid_planet
+						distance = 20
+						angle = 20
+					}
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = darkpack_darkspace.101
+	is_triggered_only = yes
+	hide_window = yes
+
+
+	immediate = {
+		create_fleet = {
+			name = random
+			effect = {
+				set_owner = from
+				while = {
+					count = 1
+					create_ship = {
+						name = random
+						design = shipclass_colonizer
+					}
+					set_location = {
+						target = from.capital_scope
+						distance = 20
+						angle = 20
+					}
+				}
+			}
+		}
+	}
+}

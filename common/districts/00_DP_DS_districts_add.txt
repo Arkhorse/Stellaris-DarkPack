@@ -1,0 +1,68 @@
+@city_cost = 500
+
+district_gt_city = {
+	base_buildtime = @DP_DS_district_urban_build_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = no
+
+	show_on_uncolonized = {
+		exists = from
+		is_planet_class = pc_gray_tempest
+		uses_district_set = gray_tempest_set
+	}
+
+	potential = {
+		uses_district_set = gray_tempest_set
+		is_planet_class = pc_gray_tempest
+	}
+
+	resources = {
+		category = planet_districts_cities
+		cost = {
+			minerals = @DP_DS_district_urban_cost
+		}
+		upkeep = {
+			energy = @DP_DS_district_upkeep_energy_urban
+		}
+	}
+
+	planet_modifier = {
+		planet_amenities_add = 15
+		planet_housing_add = 15
+		planet_max_buildings_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+}

@@ -1,0 +1,61 @@
+automate_foundry_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_foundry_designation = yes
+	}
+
+	prio_districts = {
+		district_industrial
+		district_hab_industrial
+		district_arcology_arms_industry
+		district_rw_industrial
+		######################################################################
+		# DARKSPACE #
+		######################################################################
+		# Aero
+		district_industrial_aero
+		# Nanite
+		district_gt_city
+		district_gt_alloy
+		# Arcane
+		district_arcane_res
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+		}
+
+		2 = {
+			building = building_foundry_1
+		}
+
+		3 = {
+			building = building_ministry_production
+		}
+
+		4 = {
+			building = building_production_center
+		}
+		######################################################################
+		# DARKSPACE #
+		######################################################################
+		5 = {
+			building = building_ancient_forge
+			available = { owner = { has_technology = tech_arcane_ascension_buildings has_country_flag = has_used_a_h_restart } }
+		}
+		6 = {
+			building = building_gray_tempest_kernel_1
+			available = { owner = { has_origin = origin_gray_tempest } }
+		}
+		7 = {
+			building = building_gray_tempest_kernel_2
+			available = { owner = { has_origin = origin_gray_tempest } }
+		}
+		8 = {
+			building = building_gray_tempest_kernel_3
+			available = { owner = { has_origin = origin_gray_tempest } }
+		}
+	}
+}

@@ -1,0 +1,20 @@
+namespace = darkpack
+
+country_event = {
+	id = darkpack.1000
+	is_triggered_only = yes
+	hide_window = yes
+
+	immediate = {
+		hidden_effect = {
+			every_galaxy_planet = {
+				LIMIT = {
+					NOT = {
+						is_star = yes
+					}
+				}
+				log = "Planet Class: [GetClassName]"
+			}
+		}
+	}
+}

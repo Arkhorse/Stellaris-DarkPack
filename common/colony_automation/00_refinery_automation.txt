@@ -1,0 +1,351 @@
+automate_refinery_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_refinery_designation = yes
+	}
+
+	prio_districts = {
+		district_gt_nanite
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				owner = {
+					NOR = {
+						is_hive_empire = yes
+						is_machine_empire = yes
+					}
+				}
+			}
+		}
+
+		2 = {
+			building = building_major_capital
+			available = {
+				OR = {
+					AND = {
+						num_buildings = {
+							type = building_chemical_plant
+							value > 0
+						}
+						num_buildings = {
+							type = building_crystal_plant
+							value > 0
+						}
+						num_buildings = {
+							type = building_refinery
+							value > 0
+						}
+					}
+					AND = {
+						num_buildings = {
+							type = eb_chemical_plant
+							value > 0
+						}
+						num_buildings = {
+							type = eb_crystal_plant
+							value > 0
+						}
+						num_buildings = {
+							type = eb_refinery
+							value > 0
+						}
+					}
+				}
+				owner = {
+					NOR = {
+						is_hive_empire = yes
+						is_machine_empire = yes
+					}
+				}
+			}
+		}
+
+		3 = {
+			building = building_system_capital
+			available = {
+				num_buildings = {
+					type = building_production_center
+					value = 1
+				}
+				num_buildings = {
+					type = eb_chemical_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_crystal_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_refinery2
+					value > 0
+				}
+				owner = {
+					NOR = {
+						is_hive_empire = yes
+						is_machine_empire = yes
+					}
+				}
+			}
+		}
+
+		4 = {
+			building = building_machine_capital
+			available = {
+				owner = {
+					is_machine_empire = yes
+				}
+			}
+		}
+
+		5 = {
+			building = building_machine_major_capital
+			available = {
+				OR = {
+					AND = {
+						num_buildings = {
+							type = building_chemical_plant
+							value > 0
+						}
+						num_buildings = {
+							type = building_crystal_plant
+							value > 0
+						}
+						num_buildings = {
+							type = building_refinery
+							value > 0
+						}
+					}
+					AND = {
+						num_buildings = {
+							type = eb_chemical_plant
+							value > 0
+						}
+						num_buildings = {
+							type = eb_crystal_plant
+							value > 0
+						}
+						num_buildings = {
+							type = eb_refinery
+							value > 0
+						}
+					}
+				}
+				owner = {
+					is_machine_empire = yes
+				}
+			}
+		}
+
+		6 = {
+			building = building_machine_system_capital
+			available = {
+				num_buildings = {
+					type = building_production_center
+					value = 1
+				}
+				num_buildings = {
+					type = eb_chemical_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_crystal_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_refinery2
+					value > 0
+				}
+				owner = {
+					is_machine_empire = yes
+				}
+			}
+		}
+
+		7 = {
+			building = building_hive_capital
+			available = {
+				owner = {
+					is_hive_empire = yes
+				}
+			}
+		}
+
+		8 = {
+			building = building_hive_major_capital
+			available = {
+				owner = {
+					OR = {
+						AND = {
+							num_buildings = {
+								type = building_chemical_plant
+								value > 0
+							}
+							num_buildings = {
+								type = building_crystal_plant
+								value > 0
+							}
+							num_buildings = {
+								type = building_refinery
+								value > 0
+							}
+						}
+						AND = {
+							num_buildings = {
+								type = eb_chemical_plant
+								value > 0
+							}
+							num_buildings = {
+								type = eb_crystal_plant
+								value > 0
+							}
+							num_buildings = {
+								type = eb_refinery
+								value > 0
+							}
+						}
+					}
+					is_hive_empire = yes
+				}
+			}
+		}
+
+		9 = {
+			building = building_hive_system_capital
+			available = {
+				num_buildings = {
+					type = building_production_center
+					value = 1
+				}
+				num_buildings = {
+					type = eb_chemical_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_crystal_plant2
+					value > 0
+				}
+				num_buildings = {
+					type = eb_refinery2
+					value > 0
+				}
+				owner = {
+					is_hive_empire = yes
+				}
+			}
+		}
+
+		10 = {
+			building = building_gas_extractors
+		}
+
+		11 = {
+			building = building_mote_harvesters
+		}
+
+		12 = {
+			building = building_crystal_mines
+		}
+
+		13 = {
+			building = esc_building_zro_distillery
+			available = {
+				NOT = { has_global_flag = ESC_GLOBAL_FLAG_psionic_weapons_forbidden }
+			}
+		}
+
+		14 = {
+			building = esc_building_dark_matter_facility
+			available = {
+				NOR = {
+					has_global_flag = ESC_GLOBAL_FLAG_chronospatial_weapons_forbidden
+					has_global_flag = ESC_GLOBAL_FLAG_enigmatic_weapons_forbidden
+					has_global_flag = ESC_GLOBAL_FLAG_gravitic_weapons_forbidden
+				}
+			}
+		}
+
+		15 = {
+			building = esc_building_nanite_foundry
+			available = {
+				NOT = { has_global_flag = ESC_GLOBAL_FLAG_nanite_weapons_forbidden }
+			}
+		}
+
+		16 = {
+			building = esc_building_crystal_farm_1
+		}
+		17 = {
+			building = esc_building_crystal_farm_2
+		}
+		18 = {
+			building = building_production_center
+		}
+
+		19 = {
+			building = building_chemical_plant
+			available = {
+				num_buildings = { type = building_chemical_plant value = 0 }
+			}
+		}
+
+		20 = {
+			building = building_refinery
+			available = {
+				num_buildings = { type = building_refinery value = 0 }
+			}
+		}
+
+		21 = {
+			building = building_crystal_plant
+			available = {
+				num_buildings = { type = building_crystal_plant value = 0 }
+			}
+		}
+
+		22 = {
+			building = building_chemical_plant
+			available = {
+				num_buildings = { type = building_chemical_plant value = 1 }
+			}
+		}
+
+		23 = {
+			building = building_refinery
+			available = {
+				num_buildings = { type = building_refinery value = 1 }
+			}
+		}
+
+		24 = {
+			building = building_crystal_plant
+			available = {
+				num_buildings = { type = building_crystal_plant value = 1 }
+			}
+		}
+
+		25 = {
+			building = building_chemical_plant
+			available = {
+				num_buildings = { type = building_chemical_plant value = 2 }
+			}
+		}
+
+		26 = {
+			building = building_refinery
+			available = {
+				num_buildings = { type = building_refinery value = 2 }
+			}
+		}
+
+		27 = {
+			building = building_crystal_plant
+			available = {
+				num_buildings = { type = building_crystal_plant value = 2 }
+			}
+		}
+	}
+}

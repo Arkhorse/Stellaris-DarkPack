@@ -1,0 +1,94 @@
+namespace = apsr
+
+country_event = {
+	id = apsr.992
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = { 
+		is_country_type = default		
+	}
+	
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					OR = {
+						has_origin = origin_default
+						has_origin = origin_mechanists
+						has_origin = origin_syncretic_evolution
+						has_origin = origin_scion
+						has_origin = origin_galactic_doorstep
+						has_origin = origin_shoulders_of_giants
+						has_origin = origin_lost_colony
+					}
+					OR = {
+						NOT = { has_global_flag = apsr1_spawned }
+						NOT = { has_global_flag = apsr2_spawned }
+						NOT = { has_global_flag = apsr3_spawned }
+						NOT = { has_global_flag = apsr4_spawned }
+						NOT = { has_global_flag = apsr5_spawned }
+						NOT = { has_global_flag = apsr6_spawned }
+						NOT = { has_global_flag = apsr8_spawned }
+						NOT = { has_global_flag = apsr11_spawned }
+						NOT = { has_global_flag = apsr12_spawned }
+						NOT = { has_global_flag = apsr13_spawned }
+						NOT = { has_global_flag = apsr14_spawned }
+						NOT = { has_global_flag = apsr15_spawned }
+					}
+				}
+			}
+			random_owned_planet ={
+				limit = {
+					is_capital = yes
+				}
+				spawn_random_apsr_resource_on_capital_planet = yes
+			}
+		}
+		
+		if = {
+			limit = {
+				OR = {
+					NOT = {
+						OR = {
+							has_origin = origin_default
+							has_origin = origin_mechanists
+							has_origin = origin_syncretic_evolution
+							has_origin = origin_scion
+							has_origin = origin_galactic_doorstep
+							has_origin = origin_shoulders_of_giants
+							has_origin = origin_lost_colony
+						}
+					}
+					AND = {
+						has_global_flag = apsr1_spawned
+						has_global_flag = apsr2_spawned
+						has_global_flag = apsr3_spawned
+						has_global_flag = apsr4_spawned
+						has_global_flag = apsr5_spawned
+						has_global_flag = apsr6_spawned
+						has_global_flag = apsr8_spawned
+						has_global_flag = apsr11_spawned
+						has_global_flag = apsr12_spawned
+						has_global_flag = apsr13_spawned
+						has_global_flag = apsr14_spawned
+						has_global_flag = apsr15_spawned
+					}
+				}					
+			}
+			capital_scope = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							OR = {
+								has_planet_flag = ds_apsr_target
+								can_be_apsr_planet_battle_capitals = yes
+							}
+						}
+						spawn_random_apsr_resource_on_capital_system = yes
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,98 @@
+@DP_DS_nantite_non_artificial = 0
+@DP_DS_nantite_artificial = 1.0
+
+trait_pc_gray_tempest_preference = {
+	icon = ""
+	allowed_archetypes = {
+		MACHINE
+	}
+	sorting_priority = 30
+	modifier = {
+		# Vanilla
+		pc_desert_habitability 										= @DP_DS_nantite_non_artificial
+		pc_arid_habitability 										= @DP_DS_nantite_non_artificial
+		pc_savannah_habitability 									= @DP_DS_nantite_non_artificial
+		pc_tropical_habitability 									= @DP_DS_nantite_non_artificial
+		pc_continental_habitability 								= @DP_DS_nantite_non_artificial
+		pc_tundra_habitability 										= @DP_DS_nantite_non_artificial
+		pc_arctic_habitability 										= @DP_DS_nantite_non_artificial
+		pc_ocean_habitability 										= @DP_DS_nantite_non_artificial
+		pc_alpine_habitability 										= @DP_DS_nantite_non_artificial
+		pc_nuked_habitability 										= @DP_DS_nantite_non_artificial
+		pc_gaia_habitability 										= @DP_DS_nantite_non_artificial
+
+		pc_machine_habitability 									= @DP_DS_nantite_artificial
+		pc_habitat_habitability 									= @DP_DS_nantite_artificial
+		pc_ringworld_habitable_habitability 						= @DP_DS_nantite_artificial
+		pc_city_habitability										= @DP_DS_nantite_artificial
+
+		## Technically artificial
+		pc_hive_habitability										= @DP_DS_nantite_artificial 
+		pc_relic_habitability										= @DP_DS_nantite_artificial
+
+		# Darkspace
+		pc_gray_tempest_habitability 								= @DP_DS_nantite_artificial
+
+		#Shadowgate
+		pc_shadowgate_habitability									= @DP_DS_nantite_artificial
+
+		# Gigastructural Engineering
+		pc_flusion_gaia_ecu_habitability							= @DP_DS_nantite_artificial
+		pc_virtual_reality_habitability 							= @DP_DS_nantite_artificial
+		pc_virtual_industry_habitability							= @DP_DS_nantite_artificial
+		pc_virtual_stellar_industry_habitability					= @DP_DS_nantite_artificial
+		pc_squareworld_habitable_habitability						= @DP_DS_nantite_artificial
+		pc_gigaorbital_ring_habitability							= @DP_DS_nantite_artificial
+		pc_giga_orbital_habitability								= @DP_DS_nantite_artificial
+		pc_giga_elysium_habitability 								= @DP_DS_nantite_artificial
+		pc_giga_penrose_habitable_habitability						= @DP_DS_nantite_artificial
+		pc_interstellar_habitat_habitability						= @DP_DS_nantite_artificial
+		pc_interstellar_ringworld_habitable_habitability			= @DP_DS_nantite_artificial
+		pc_flat_world_habitability									= @DP_DS_nantite_artificial
+		pc_ringworld_city_habitability 								= @DP_DS_nantite_artificial
+		pc_ringworld_machine_habitability 							= @DP_DS_nantite_artificial
+		pc_ringworld_hive_habitability 								= @DP_DS_nantite_artificial
+		pc_birch_habitability 										= @DP_DS_nantite_artificial
+		pc_equatorial_shipyard_habitability 						= @DP_DS_nantite_artificial
+		pc_giga_planetary_computer_habitability						= @DP_DS_nantite_artificial
+		pc_habitable_gas_giant_habitability 						= @DP_DS_nantite_artificial
+		pc_alderson_slice_gaia_habitability 						= @DP_DS_nantite_artificial
+		pc_alderson_slice_gaia_shattered_habitability 				= @DP_DS_nantite_artificial
+		pc_alderson_slice_pc_habitability 							= @DP_DS_nantite_artificial
+		pc_alderson_slice_ecu_habitability 							= @DP_DS_nantite_artificial
+		pc_alderson_slice_hive_habitability 						= @DP_DS_nantite_artificial
+		pc_alderson_slice_machine_habitability 						= @DP_DS_nantite_artificial
+		pc_void_birch_habitability 									= @DP_DS_nantite_artificial
+		pc_giga_maginot_world_habitability 							= @DP_DS_nantite_artificial
+		pc_giga_maginot_gas_giant_habitability 						= @DP_DS_nantite_artificial
+		pc_giga_maginot_ringworld_habitability 						= @DP_DS_nantite_artificial
+
+		pc_ll_foggy_habitability 									= @DP_DS_nantite_non_artificial
+		pc_ll_torrid_habitability 									= @DP_DS_nantite_non_artificial
+		pc_ll_temperate_habitability 								= @DP_DS_nantite_non_artificial
+		pc_katzenland_habitability 									= @DP_DS_nantite_non_artificial
+
+		# APSR
+		pc_apsr_ancient_habitability 								= @DP_DS_nantite_artificial
+		pc_apsr_unique_habitability 								= @DP_DS_nantite_artificial
+
+		#Guilli's
+		pc_gpm_res_habitability										= @DP_DS_nantite_artificial
+		pc_gpm_precursor_tomb_habitability 							= @DP_DS_nantite_artificial
+
+		# Archaeology Story Pack
+		pc_nuked_colorful_habitability 								= @DP_DS_nantite_non_artificial
+		pc_asp_rainworld_habitability 								= @DP_DS_nantite_non_artificial
+		pc_asp_ocean_red_habitability 								= @DP_DS_nantite_non_artificial
+
+		# Machine & Robot Expansion
+		xvcv_mdlc_pc_mechanical_habitability 						= @DP_DS_nantite_artificial
+		xvcv_mdlc_pc_machine_auto_habitability 						= @DP_DS_nantite_artificial
+		xvcv_mdlc_pc_machine_ecu_habitability 						= @DP_DS_nantite_artificial
+		xvcv_mdlc_pc_machine_ser_habitability 						= @DP_DS_nantite_artificial
+		xvcv_mdlc_pc_virtual_habitability 							= @DP_DS_nantite_artificial
+	}
+	ai_weight = {
+		weight = 0
+	}
+}

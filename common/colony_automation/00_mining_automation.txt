@@ -1,0 +1,39 @@
+automate_mining_planet = {
+	category = "planet_automation_designation_construction"
+
+	available = {
+		has_mining_designation = yes
+	}
+
+	prio_districts = {
+		district_mining
+		district_hab_mining
+		district_mining_uncapped
+		district_gt_mineral
+	}
+
+	buildings = {
+		1 = {
+			building = building_capital
+			available = {
+				always = yes
+			}
+		}
+
+		2 = {
+			building = building_mineral_purification_plant
+		}
+
+		3 = {
+			building = eb_mineral
+		}
+
+		4 = {
+			building = esc_building_magmaminer_1
+		}
+
+		5 = {
+			building = esc_building_magmaminer_2
+		}
+	}
+}
