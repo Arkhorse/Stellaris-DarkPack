@@ -1,4 +1,14 @@
 {
+	"settings": {
+		"cwtools.errors.ignorefiles": [
+			"O:\\SteamLibrary\\steamapps\\workshop\\content\\",
+			"README.txt",
+			"credits.txt",
+			"credits_l_simp_chinese.txt",
+			"reference.txt",
+			"startup_info.txt"
+		]
+	},
 	"folders": [
 		{
 			"name": "Darkpack Irony Patch",
@@ -76,7 +86,8 @@
 			"path": "O:/SteamLibrary/steamapps/workshop/content/281990/2494712590"
 		},
 		{
-			"path": "E:/Stellaris/DarkPack/Stellaris-DarkPack"
+			"path": "E:/Stellaris/DarkPack/Stellaris-DarkPack",
+			"name": "Github Folder"
 		}
 	]
 }
