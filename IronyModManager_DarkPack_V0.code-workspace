@@ -1,13 +1,62 @@
 {
 	"settings": {
+		"editor.tokenColorCustomizations": {
+			"textMateRules": [
+				{
+					"scope": "log.error",
+					"settings": {
+						"foreground": "#af1f1f",
+						"fontStyle": "bold"
+					}
+				},
+				{
+					"scope": "log.warning",
+					"settings": {
+						"foreground": "#f4ad42",
+						"fontStyle": ""
+					}
+				}
+			]
+		},
+		"logFileHighlighter.customPatterns": [
+			{
+				"pattern": "Error",
+				"foreground": "#FF0038"
+			},
+			{
+				"pattern": "ERROR",
+				"foreground": "#FF0038"
+			},
+			{
+				"pattern": "Warning",
+				"foreground": "#FFA500"
+			},
+			{
+				"pattern": "WARNING",
+				"foreground": "#FFA500"
+			},
+			{
+				"pattern": "Invalid supported_version in",
+				"foreground": "#15ff00"
+			}
+		],
+		"files.associations": {
+			"*.mod": "stellaris",
+			"*.txt": "stellaris",
+			"*.log.*": "log"
+		},
+		"cwtools.localisation.generated_strings": ": \"TRANSLATION_NEEDED\"",
+		"cwtools.localisation.languages": [
+			"English"
+		],
 		"cwtools.errors.ignorefiles": [
-			"O:\\SteamLibrary\\steamapps\\workshop\\content\\",
 			"README.txt",
 			"credits.txt",
 			"credits_l_simp_chinese.txt",
 			"reference.txt",
 			"startup_info.txt"
-		]
+		],
+		"cwtools.cache.stellaris": "O:\\SteamLibrary\\steamapps\\common\\Stellaris"
 	},
 	"folders": [
 		{
